@@ -9,7 +9,7 @@ const useForm = (initialValue) => {
         setValues(updatedValue);
       };
 
-      //returning an array containing the "values" variable as well as the "setValues" and "handleChanges" functions
+    //returning an array containing the "values" variable as well as the "setValues" and "handleChanges" functions
     return [values, setValues, handleChanges];
 }
 
