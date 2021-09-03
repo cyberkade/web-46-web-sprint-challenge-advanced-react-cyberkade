@@ -7,6 +7,8 @@ import useForm from "../hooks/useForm";
 
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  
+  //Setting each input state seperately using custom hook useForm, and giving each input their own "handle" function
   const [firstName, setFN, handleFN] = useForm('');
   const [lastName, setLN, handleLN] = useForm('');
   const [address, setAddress, handleAddress] = useForm('');
@@ -59,7 +61,7 @@ const CheckoutForm = (props) => {
           Zip:
           <input name="zip" value={zip} onChange={e => handleZip(e.target.value)} />
         </label>
-        <button>Checkout</button>
+        <button data-testid="submit">Checkout</button>
       </form>
 
       {showSuccessMessage && (
